@@ -12,9 +12,8 @@ public class Ball : MonoBehaviour
         trailObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void ActivateTrail()
     {
-        
+        trailObject.SetActive(true);
     }
 }

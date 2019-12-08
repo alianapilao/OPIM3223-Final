@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd33a3e7f67174df7b41c0676c66a29f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 717349043}
+  ball: {fileID: 717349049}
   playerCamera: {fileID: 1740434087}
   ballDistance: 2
   ballThrowingForce: 500
@@ -1005,7 +1005,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d484ab2262cd41cdade3f4205fb863e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trailObject: {fileID: 0}
+  trailObject: {fileID: 1209388903}
 --- !u!1 &770238335
 GameObject:
   m_ObjectHideFlags: 0
