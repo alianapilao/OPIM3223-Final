@@ -6,6 +6,9 @@ public class AliPlayer : MonoBehaviour
 {
     public Ball ball;
     public GameObject playerCamera;
+    public int helath = 3;
+    public AudioClip shootingSound;
+    private AudioSource audioSource;
 
     public float ballDistance = 2f;
     public float ballThrowingForce = 5f;
@@ -15,6 +18,7 @@ public class AliPlayer : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();
         ball.GetComponent<Rigidbody>().useGravity = false; 
     }
 
