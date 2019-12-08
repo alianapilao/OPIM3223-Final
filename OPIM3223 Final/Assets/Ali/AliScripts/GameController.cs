@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-    public Player player;
+    public AliPlayer player;
     public float resetTimer = 5f;
 
     // Start is called before the first frame update

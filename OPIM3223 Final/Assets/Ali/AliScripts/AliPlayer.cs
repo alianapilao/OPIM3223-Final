@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player : MonoBehaviour
+public class AliPlayer : MonoBehaviour
 {
     public Ball ball;
     public GameObject playerCamera;
