@@ -1,4 +1,5 @@
 ﻿<Properties StartupConfiguration="{0FB11DBE-111D-B46E-853D-CE9C3AA41334}|">
+<<<<<<< HEAD
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Ali/AliScripts/ScoreArea.cs">
     <Files>
       <File FileName="Assets/Scripts/MenuScripts/UIManager.cs" Line="14" Column="41" />
@@ -25,10 +26,23 @@
         </State>
       </Pad>
     </Pads>
+=======
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/NathanScripts/CameraRig.cs">
+    <Files>
+      <File FileName="Assets/Scripts/MenuScripts/UIManager.cs" Line="14" Column="41" />
+      <File FileName="Assets/Ali/AliScripts/Player.cs" Line="14" Column="1" />
+      <File FileName="Assets/Ali/AliScripts/GameController.cs" Line="28" Column="6" />
+      <File FileName="Assets/Ali/AliScripts/Ball.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/NathanScirpts/CameraRig.cs" Line="29" Column="1" />
+      <File FileName="Assets/Scripts/NathanScirpts/PlayerMovement.cs" Line="8" Column="27" />
+      <File FileName="Assets/Scripts/NathanScirpts/Player1.cs" Line="26" Column="1" />
+      <File FileName="Assets/Scripts/NathanScripts/CameraRig.cs" Line="7" Column="28" />
+    </Files>
+>>>>>>> 9479f688108bd946274055a8808ccb7bd11918d5
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9b3c4c2b-042c-4553-ac6d-cee4a3993583" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="9884aff2-1f0f-425d-8838-948644e64add" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
