@@ -483,6 +483,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ball: {fileID: 717349049}
   playerCamera: {fileID: 1740434087}
+  helath: 3
+  shootingSound: {fileID: 0}
   ballDistance: 1.5
   ballThrowingForce: 500
   holdingBall: 1
@@ -1362,6 +1364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 856907153}
   - component: {fileID: 856907154}
+  - component: {fileID: 856907155}
   m_Layer: 0
   m_Name: GameController
   m_TagString: Untagged
@@ -1399,6 +1402,102 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 378338467}
   resetTimer: 5
+--- !u!82 &856907155
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 856907152}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: c2712ba232bde473eb399480bb272836, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &915284914
 GameObject:
   m_ObjectHideFlags: 0
@@ -11410,6 +11509,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 378338467, guid: 6f34c7dccd9574fe8912834b953dfc55, type: 3}
+      propertyPath: ballDistance
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 4861900861498121937, guid: 6f34c7dccd9574fe8912834b953dfc55,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11464,10 +11567,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 378338467, guid: 6f34c7dccd9574fe8912834b953dfc55, type: 3}
-      propertyPath: ballDistance
-      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 1184642681, guid: 6f34c7dccd9574fe8912834b953dfc55, type: 3}
       propertyPath: m_Name
