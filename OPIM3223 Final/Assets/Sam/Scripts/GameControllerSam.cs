@@ -46,7 +46,7 @@ public class GameControllerSam : MonoBehaviour
             Destroy(enemy);
         }
 
-        SceneManager.LoadScene(/* next scene */"MenuScene");
+        SceneManager.LoadScene("AliScene");
     }
 
     void restartGame()

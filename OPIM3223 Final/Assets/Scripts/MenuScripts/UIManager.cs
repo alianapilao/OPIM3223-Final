@@ -11,7 +11,7 @@ public class UIManager : MonoBehaviour
 
     public void StartGame()
     {
-        SceneManager.LoadScene("AliScene");
+        SceneManager.LoadScene("Sam");
     }
 
     public void OpenSettings()
