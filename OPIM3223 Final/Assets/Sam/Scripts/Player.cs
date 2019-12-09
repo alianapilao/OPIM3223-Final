@@ -41,6 +41,7 @@ public class Player : MonoBehaviour
                 Vector3 move = keyDirections[i] * acceleration * Time.deltaTime;
                 movePlayer(move);
             }
+            /*
             if (Input.GetKeyDown(KeyCode.W))
                 transform.forward = new Vector3(1f, 0f, 0f);
             else if (Input.GetKeyDown(KeyCode.S))
@@ -49,9 +50,18 @@ public class Player : MonoBehaviour
                 transform.forward = new Vector3(0f, 0f, 1f);
             else if (Input.GetKeyDown(KeyCode.D))
                 transform.forward = new Vector3(0f, 0f, -1f);
-        }
+                */
 
-        
+
+            Vector3 movementDirection = new Vector3(Input.GetAxisRaw("Vertical"), 0,  - 1 * Input.GetAxisRaw("Horizontal"));
+
+            if (movementDirection != Vector3.zero)
+            {
+                this.transform.rotation = Quaternion.Slerp(this.transform.rotation, Quaternion.LookRotation(movementDirection), 0.15f);
+
+            }
+
+        }
     }
 
 
