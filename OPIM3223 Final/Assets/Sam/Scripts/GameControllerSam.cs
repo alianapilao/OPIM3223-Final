@@ -5,15 +5,18 @@ using UnityEngine.SceneManagement;
 
 public class GameControllerSam : MonoBehaviour
 {
-
-    public GameObject playerPrefab;
+    public AudioClip cheers;
+    private AudioSource audioSource;
+    public Fireworks fireworks;
 
     // Start is called before the first frame update
     void Start()
     {
         var player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        
         player.onPlayerDeath += onPlayerDeath;
         player.onClassReached += onClassReached;
+        audioSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -23,6 +26,8 @@ public class GameControllerSam : MonoBehaviour
 
     void onClassReached(Player player)
     {
+        audioSource.PlayOneShot(cheers);
+        fireworks.explode();
         Invoke("win", 3);
     }
 
