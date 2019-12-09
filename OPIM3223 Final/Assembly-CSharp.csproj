@@ -68,7 +68,10 @@
     <Compile Include="Assets\Ali\AliScripts\ScoreArea.cs" />
     <Compile Include="Assets\AllSkyFree\AllSkyFree_Menu.cs" />
     <Compile Include="Assets\Sam\Scripts\CameraRigSam.cs" />
+    <Compile Include="Assets\Sam\Scripts\GameControllerSam.cs" />
+    <Compile Include="Assets\Sam\Scripts\Gant.cs" />
     <Compile Include="Assets\Sam\Scripts\Player.cs" />
+    <Compile Include="Assets\Sam\Scripts\TimeEnemy.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\MenuSceneLoader.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\PauseMenu.cs" />
     <Compile Include="Assets\SampleScenes\Menu\Scripts\SceneAndURLLoader.cs" />

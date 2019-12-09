@@ -1,18 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class Player : MonoBehaviour
 {
 
     public float acceleration = 700;
     public float maxSpeed = 6000;
-
+    public int health = 3;
     private Rigidbody rigidBody;
     private KeyCode[] inputKeys;
     private Vector3[] keyDirections;
 
-
+    public event Action<Player> onPlayerDeath;
+    public event Action<Player> onClassReached;
 
     // Start is called before the first frame update
     void Start()
@@ -39,11 +41,20 @@ public class Player : MonoBehaviour
                 Vector3 move = keyDirections[i] * acceleration * Time.deltaTime;
                 movePlayer(move);
             }
-            
+            if (Input.GetKeyDown(KeyCode.W))
+                transform.forward = new Vector3(1f, 0f, 0f);
+            else if (Input.GetKeyDown(KeyCode.S))
+                transform.forward = new Vector3(-1f, 0f, 0f);
+            else if (Input.GetKeyDown(KeyCode.A))
+                transform.forward = new Vector3(0f, 0f, 1f);
+            else if (Input.GetKeyDown(KeyCode.D))
+                transform.forward = new Vector3(0f, 0f, -1f);
         }
 
         
     }
+
+
 
     void movePlayer(Vector3 movement)
     {
@@ -56,5 +67,43 @@ public class Player : MonoBehaviour
             rigidBody.AddForce(movement);
         }
 
+    }
+
+    void OnCollisionEnter(Collision collision)
+    {
+        
+        TimeEnemy timeEnemy = collision.collider.gameObject.GetComponent<TimeEnemy>();
+        if (timeEnemy)
+        {
+            collidedWithEnemy(timeEnemy);
+        }
+        if (collision.gameObject.tag == "Gant")
+        {
+            collidedWithGant();
+        }
+        
+    }
+
+    void collidedWithGant()
+    {
+
+        if (onClassReached != null)
+        {
+            onClassReached(this);
+        }
+    }
+
+    void collidedWithEnemy(TimeEnemy timeEnemy)
+    {
+        timeEnemy.Attack(this);
+
+        if (health <= 0)
+        {
+            if (onPlayerDeath != null)
+            {
+                onPlayerDeath(this);
+            }
+
+        }
     }
 }

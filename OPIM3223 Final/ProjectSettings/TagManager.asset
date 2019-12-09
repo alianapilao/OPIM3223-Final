@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Midterm
   - Final
+  - Enemy
+  - Gant
   layers:
   - Default
   - TransparentFX
